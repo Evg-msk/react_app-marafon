@@ -1,9 +1,8 @@
-import styles from './Layout.module.css'
-import bg2 from '../../assets/bg2.jpg';
-const Layout = ({title, descr, urlBg, colorBg, id }) => {
-    const styleRoot = urlBg ? {backgroundImage: {bg2}}: colorBg ? {backgroundColor: 'gray'} : {};
+import styles from './Layout.module.css';
+const Layout = ({title, descr, id, colorBg, urlBg}) => {
+    const styleRoot = urlBg ? {background: `url(${urlBg})` } : {background: colorBg};
     return (
-        <section className={styles.root} style={styleRoot} id={id}>
+        <section className={styles.root} id={id} style={styleRoot}>
             <div className={styles.wrapper}>
                 <article>
                     <div className={styles.title}>
